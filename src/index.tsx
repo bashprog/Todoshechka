@@ -6,7 +6,7 @@ import './main.scss';
 import CardContainer from "./containers/CardContainer/CardContainer";
 
 const root = ReactDOM.createRoot(document.getElementById("app") as HTMLElement);
-//На месте
+//Отбежал ибо дела, мб сегодня закончу
 
 root.render(
     <>
