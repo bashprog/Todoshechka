@@ -4,20 +4,7 @@ import './Card.scss';
 
 import AddInput from "./AddInput";
 
-interface item {
-    id: string,
-    title: string,
-    status: 'clear' | 'done' | 'canceled',
-}
-
-interface IProps {
-    items: item[],
-    addItem: (title: string) => void,
-    deleteItem: (id: string) => void,
-    changeStatus: (id: string) => void,
-}
-
-const Card: React.FC<IProps> = ({items, changeStatus, deleteItem}) => {
+const Card: React.FC = () => {
     return(
         <>
             <div className="container">
