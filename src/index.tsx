@@ -3,11 +3,13 @@ import ReactDOM from 'react-dom/client';
 
 import './main.scss';
 
+import CardContainer from "./containers/CardContainer/CardContainer";
+
 const root = ReactDOM.createRoot(document.getElementById("app") as HTMLElement);
 
 root.render(
     <>
-        <h1>TEST</h1>
+        <CardContainer/>
     </>
 )
 
