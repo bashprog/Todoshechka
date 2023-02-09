@@ -8,9 +8,9 @@
 
 .addInput {
   width: 100%;
-  margin-bottom: 10px;
   display: flex;
   border-bottom: 1px solid $gray;
+  margin-bottom: -1px;
   input {
     border-radius: 0;
     border: 0;
