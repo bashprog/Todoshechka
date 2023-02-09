@@ -37,6 +37,7 @@ export const useCardStore = create<CardStore>()(devtools((set) => ({
                         break;
                 }
             }
+            return el;
         })]
     }))
 })));
