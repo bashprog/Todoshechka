@@ -2,6 +2,8 @@ import React from 'react';
 
 import './Card.scss';
 
+import AddInput from "./AddInput";
+
 interface item {
     id: string,
     title: string,
@@ -15,12 +17,16 @@ interface IProps {
     changeStatus: (id: string) => void,
 }
 
-const Card: React.FC<IProps> = ({items, addItem, changeStatus, deleteItem}) => {
+const Card: React.FC<IProps> = ({items, changeStatus, deleteItem}) => {
     return(
         <>
-            <h1 onClick={() => addItem('123')}>CARD</h1>
-            <h2 onClick={() => deleteItem(items[0].id)}>Delete first card</h2>
-            <h2 onClick={() => changeStatus(items[0].id)}>ChangeStatus on first card</h2>
+            <div className="container">
+                <div className="flex w100 center">
+                    <div className="desk">
+                        <AddInput/>
+                    </div>
+                </div>
+            </div>
         </>
     )
 };

@@ -5,7 +5,6 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
-  background: $lightgray;
 }
 
 .container {
@@ -13,8 +12,17 @@ body {
   width: 1200px;
 }
 
+.w100 {
+  width: 100%;
+}
+
 .flex {
   display: flex;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
 }
 
 .wrap {

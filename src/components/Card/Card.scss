@@ -1,0 +1,43 @@
+@import "../../var";
+
+.desk {
+  width: 80%;
+  border: 1px solid $gray;
+  overflow: hidden;
+}
+
+.addInput {
+  width: 100%;
+  margin-bottom: 10px;
+  display: flex;
+  border-bottom: 1px solid $gray;
+  input {
+    border-radius: 0;
+    border: 0;
+    //border: 1px solid $gray;
+    width: 85%;
+    height: 36px;
+    font-size: 26px;
+    &:focus {
+      outline: none;
+    }
+  }
+  .add {
+    border-left: 1px solid $gray;
+    width: 15%;
+    height: 38px;
+    cursor: pointer;
+    transition: .3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: gray;
+    &.active {
+      color: black;
+      font-size: 24px;
+      &:hover {
+        background: $green;
+      }
+    }
+  }
+}
