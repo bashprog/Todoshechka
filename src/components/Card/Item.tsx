@@ -2,6 +2,8 @@ import React from 'react';
 
 import {useCardStore} from "../../containers/CardContainer/store";
 
+import {BiTrash} from "react-icons/bi";
+
 interface item {
     id: string,
     title: string,
@@ -9,7 +11,7 @@ interface item {
 }
 
 const Item: React.FC<{item: item}> = ({item}) => {
-    const {changeStatus} = useCardStore();
+    const {changeStatus, deleteItem} = useCardStore();
 
     return(
         <div className={`item ${item.status}`}>
@@ -20,6 +22,9 @@ const Item: React.FC<{item: item}> = ({item}) => {
                 </div>
             </div>
             <span>{item.title}</span>
+            <div className={'delete'} onClick={() => deleteItem(item.id)}>
+                <BiTrash/>
+            </div>
         </div>
     )
 };
