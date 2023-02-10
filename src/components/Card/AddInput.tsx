@@ -10,7 +10,12 @@ const AddInput: React.FC = () => {
     return (
         <div className={'addInput'}>
             <input type="text" value={state} onChange={(e) => changeState(e.target.value)} placeholder={'Введите желаемое нвзвание'} />
-            <div className={`add ${state ? 'active' : ''}`} onClick={() => {addItem(state); changeState('')}}>
+            <div className={`add ${state ? 'active' : ''}`} onClick={() => {
+                if (state) {
+                    addItem(state);
+                    changeState('');
+                }
+            }}>
                 <span>&#10003;</span>
             </div>
         </div>

@@ -33,7 +33,7 @@ export const useCardStore = create<CardStore>()(devtools((set) => ({
                         el.status = 'canceled';
                         break;
                     case "canceled":
-                        el.status = 'done';
+                        el.status = 'clear';
                         break;
                 }
             }

@@ -16,7 +16,7 @@ const Card: React.FC = () => {
                 <div className="flex w100 center">
                     <div className="desk">
                         <AddInput/>
-                        {items.length ? items.map(el => (<Item/>)) : null}
+                        {items.length ? items.map(el => (<Item key={el.id} item={el}/>)) : null}
                     </div>
                 </div>
             </div>

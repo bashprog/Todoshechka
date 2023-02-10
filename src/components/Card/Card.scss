@@ -41,3 +41,50 @@
     }
   }
 }
+
+.item {
+  width: 100%;
+  border-bottom: 1px solid $gray;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  &.done {
+    color: green;
+  }
+  &.canceled {
+    span {
+      text-decoration: line-through;
+      color: gray;
+    }
+    .circle {
+      text-decoration: none;
+      color: $brand-color;
+    }
+  }
+  &:nth-last-child(n) {
+    margin-bottom: -1px;
+  }
+  .checkbox {
+    width: 30px;
+    height: 30px;
+    border-right: 1px solid $gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    .circle {
+      width: 20px;
+      height: 20px;
+      border-radius: 100px;
+      border: 1px solid $gray;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 16px;
+    }
+  }
+  span {
+    margin-left: 10px;
+  }
+}
